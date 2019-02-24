@@ -11,7 +11,11 @@
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="js/cart.js"></script>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -37,36 +41,43 @@
 	</div>
 
 	<!-- Header section -->
-	<header class="header-section">
+	<header style="background-color:#ffcbc5;" class="header-section">
 		<div class="header-top">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-2 text-center text-lg-left">
 						<!-- logo -->
 						<a href="./index.html" class="site-logo">
-							<img src="img/logo.png" alt="">
+							<img style="height:80px;width:80px" src="" alt="">
 						</a>
 					</div>
-					<div class="col-xl-6 col-lg-5">
+					<div class="col-xl-5 col-lg-4">
 						<form class="header-search-form">
 							<input type="text" placeholder="Search on divisima ....">
 							<button><i class="flaticon-search"></i></button>
 						</form>
 					</div>
-					<div class="col-xl-4 col-lg-5">
+					<div class="col-xl-5 col-lg-6">
 						<div class="user-panel">
 							<div class="up-item">
 								<i class="flaticon-profile"></i>
 								<a href="#">Sign</a> In or <a href="#">Create Account</a>
 							</div>
-							<div class="up-item">
+							<div class="up-item ml">
 								<div class="shopping-card">
 									<i class="flaticon-bag"></i>
-									<span>0</span>
+									<span class="total-count">0</span>
 								</div>
-								<a href="#">Shopping Cart</a>
+								<a href="#" data-toggle="modal" data-target="#cart">Shopping Cart</a>
+							</div>
+							<div class="up-item">
+								<div class="shopping-card">
+									<i class="fa fa-info" aria-hidden="true"></i>
+								</div>
+								<a href="contact.html">About us</a>
 							</div>
 						</div>
+	
 					</div>
 				</div>
 			</div>
@@ -75,31 +86,32 @@
 			<div class="container">
 				<!-- menu -->
 				<ul class="main-menu">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Women</a></li>
-					<li><a href="#">Men</a></li>
-					<li><a href="#">Jewelry
-						<span class="new">New</span>
-					</a></li>
-					<li><a href="#">Shoes</a>
+					<li><a href="#">Accueil</a></li>
+	
+	
+					<li><a href="#">Accessoires Femmes</a>
 						<ul class="sub-menu">
-							<li><a href="#">Sneakers</a></li>
-							<li><a href="#">Sandals</a></li>
+							<li><a href="./category.html">Echarpes</a></li>
+							<li><a href="#">Accessoires Cheveux</a></li>
 							<li><a href="#">Formal Shoes</a></li>
-							<li><a href="#">Boots</a></li>
-							<li><a href="#">Flip Flops</a></li>
+							<li><a href="#">Ceintures</a></li>
+							<li><a href="#">Gants</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Pages</a>
+					<li><a href="#">Bijoux</a>
 						<ul class="sub-menu">
-							<li><a href="./product.html">Product Page</a></li>
-							<li><a href="./category.html">Category Page</a></li>
-							<li><a href="./cart.html">Cart Page</a></li>
-							<li><a href="./checkout.html">Checkout Page</a></li>
-							<li><a href="./contact.html">Contact Page</a></li>
+							<li><a href="./product.html">Boucles d'oreilles</a></li>
+							<li><a href="./category.html">Bracelets</a></li>
+							<li><a href="./cart.html">Colliers</a></li>
+							<li><a href="./category.html">Bagues</a></li>
+							<li><a href="./contact.html">Ensemble De Bijoux</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Blog</a></li>
+					<li>
+						<a href="#">Montres
+							<span class="new">New</span>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -122,11 +134,7 @@
 							<a href="#" class="site-btn sb-white">ADD TO CART</a>
 						</div>
 					</div>
-					<div class="offer-card text-white">
-						<span>from</span>
-						<h2>$29</h2>
-						<p>SHOP NOW</p>
-					</div>
+					
 				</div>
 			</div>
 			<div class="hs-item set-bg" data-setbg="img/bg5.jpg">
@@ -181,7 +189,7 @@
 						<div class="feature-icon">
 							<img src="img/icons/3.png" alt="#">
 						</div>
-						<h2>Free & fast Delivery</h2>
+						<h2>Free Delivery</h2>
 					</div>
 				</div>
 			</div>
@@ -193,77 +201,83 @@
 	<!-- letest product section -->
 	<section class="top-letest-product-section">
 		<div class="container">
-			<div class="section-title">
-				<h2>LATEST PRODUCTS</h2>
-			</div>
-			<div class="product-slider owl-carousel">
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="./img/product/1.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top </p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<div class="tag-new">New</div>
-						<img src="./img/product/2.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Black and White Stripes Dress</p>
-					</div>
-				</div>
-				<div class="product-item">
-					<div class="pi-pic">
-						<img src="./img/product/3.jpg" alt="">
-						<div class="pi-links">
-							<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-							<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
-						</div>
-					</div>
-					<div class="pi-text">
-						<h6>$35,00</h6>
-						<p>Flamboyant Pink Top </p>
-					</div>
-				</div>
-				<div class="product-item">
-						<div class="pi-pic">
-							<img src="./img/product/4.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+			<div class="row">
+				<div class="col-12">
+						<div class="section-title">
+								<h2>LATEST PRODUCTS</h2>
 							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
-				<div class="product-item">
-						<div class="pi-pic">
-							<img src="./img/product/6.jpg" alt="">
-							<div class="pi-links">
-								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
-								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							<div class="product-slider owl-carousel">
+								<div class="product-item" style="border:1px solid black;">
+									<div class="pi-pic">
+										<img src="./img/product/p3.jpeg" alt="">
+										<div class="pi-links">
+											<a href="#" class="add-card add-to-cart" data-name="Orange" data-price="0.5"><i class="flaticon-bag"></i><span>ADDDD TO CART</span></a>
+											<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+										</div>
+									</div>
+									<div class="pi-text">
+										<h6>$35,00</h6>
+										<p>Flamboyant Pink Top </p>
+									</div>
+								</div>
+								<div class="product-item">
+									<div class="pi-pic">
+										<div class="tag-new">New</div>
+										<img src="./img/product/p2.jpg" alt="">
+										<div class="pi-links">
+											<a href="#" class="add-card" onclick="incrementer"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+											<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+										</div>
+									</div>
+									<div class="pi-text">
+										<h6>$35,00</h6>
+										<p>Black and White Stripes Dress</p>
+									</div>
+								</div>
+								<div class="product-item">
+									<div class="pi-pic">
+										<img src="./img/product/p5.jpg" alt="">
+										<div class="pi-links">
+											<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+											<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+										</div>
+									</div>
+									<div class="pi-text">
+										<h6>$35,00</h6>
+										<p>Flamboyant Pink Top </p>
+									</div>
+								</div>
+								<div class="product-item">
+										<div class="pi-pic">
+											<img src="./img/product/p4.jpg" alt="">
+											<div class="pi-links">
+												<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+												<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+											</div>
+										</div>
+										<div class="pi-text">
+											<h6>$35,00</h6>
+											<p>Flamboyant Pink Top </p>
+										</div>
+									</div>
+								<div class="product-item">
+										<div class="pi-pic">
+											<img src="./img/product/p2.jpg" alt="">
+											<div class="pi-links">
+												<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+												<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+											</div>
+										</div>
+										<div class="pi-text">
+											<h6>$35,00</h6>
+											<p>Flamboyant Pink Top </p>
+										</div>
+									</div>
 							</div>
-						</div>
-						<div class="pi-text">
-							<h6>$35,00</h6>
-							<p>Flamboyant Pink Top </p>
-						</div>
-					</div>
+				</div>
+				<div class="" ></div>
 			</div>
+			
 		</div>
 	</section>
 	<!-- letest product section end -->
@@ -290,7 +304,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
-							<img src="./img/product/5.jpg" alt="">
+							<img src="./img/product/p2.jpg" alt="">
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
@@ -306,7 +320,7 @@
 					<div class="product-item">
 						<div class="pi-pic">
 							<div class="tag-sale">ON SALE</div>
-							<img src="./img/product/6.jpg" alt="">
+							<img src="./img/product/p3.jpeg" alt="">
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
@@ -321,7 +335,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
-							<img src="./img/product/7.jpg" alt="">
+							<img src="./img/product/p4.jpg" alt="">
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
@@ -336,7 +350,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
-							<img src="./img/product/8.jpg" alt="">
+							<img src="./img/product/p5.jpg" alt="">
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
@@ -351,7 +365,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
-							<img src="./img/product/9.jpg" alt="">
+							<img src="./img/product/p4.jpg" alt="">
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
@@ -366,7 +380,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
-							<img src="./img/product/10.jpg" alt="">
+							<img src="./img/product/p5.jpg" alt="">
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
@@ -381,7 +395,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
-							<img src="./img/product/11.jpg" alt="">
+							<img src="./img/product/p3.jpeg" alt="">
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
@@ -396,7 +410,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="product-item">
 						<div class="pi-pic">
-							<img src="./img/product/12.jpg" alt="">
+							<img src="./img/product/p2.jpg" alt="">
 							<div class="pi-links">
 								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
 								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
@@ -420,7 +434,7 @@
 	<!-- Banner section -->
 	<section class="banner-section">
 		<div class="container">
-			<div class="banner set-bg" data-setbg="img/banner-bg.jpg">
+			<div class="banner set-bg" data-setbg="img/product/a.jpg">
 				<div class="tag-new">NEW</div>
 				<span>New Arrivals</span>
 				<h2>STRIPED SHIRTS</h2>
@@ -431,17 +445,79 @@
 	<!-- Banner section end  -->
 
 
+		<!-- Main -->
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="card" style="width: 20rem;">
+						<img class="card-img-top" src="http://www.azspagirls.com/files/2010/09/orange.jpg" alt="Card image cap">
+						<div class="card-block">
+							<h4 class="card-title">Orange</h4>
+							<p class="card-text">Price: $0.5</p>
+							<a href="#" data-name="Orange" data-price="0.5" class="add-to-cart btn btn-primary">Add to cart</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card" style="width: 20rem;">
+						<img class="card-img-top" src="http://images.all-free-download.com/images/graphicthumb/vector_illustration_of_ripe_bananas_567893.jpg"
+						 alt="Card image cap">
+						<div class="card-block">
+							<h4 class="card-title">Banana</h4>
+							<p class="card-text">Price: $1.22</p>
+							<a href="#" data-name="Banana" data-price="1.22" class="add-to-cart btn btn-primary">Add to cart</a>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="card" style="width: 20rem;">
+						<img class="card-img-top" src="https://3.imimg.com/data3/IC/JO/MY-9839190/organic-lemon-250x250.jpg" alt="Card image cap">
+						<div class="card-block">
+							<h4 class="card-title">Lemon</h4>
+							<p class="card-text">Price: $5</p>
+							<a href="#" data-name="Lemon" data-price="5" class="add-to-cart btn btn-primary">Add to cart</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		  
+		 <!-- Modal -->
+		<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<table class="show-cart table">
+				  
+				</table>
+				<div>Total price: $<span class="total-cart"></span></div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Order now</button>
+			  </div>
+			</div>
+		  </div>
+		</div> 
+		
+
 	<!-- Footer section -->
 	<section class="footer-section">
 		<div class="container">
 			<div class="footer-logo text-center">
-				<a href="index.html"><img src="./img/logo-light.png" alt=""></a>
+				<a href="index.html"><img src="./img/logo.png" alt=""></a>
 			</div>
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget about-widget">
-						<h2>About</h2>
-						<p>Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+						<h2 >About</h2>
+						<p style="color:#264e70;">Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
 						<img src="img/cards.png" alt="">
 					</div>
 				</div>
@@ -470,7 +546,7 @@
 						<h2>Questions</h2>
 						<div class="fw-latest-post-widget">
 							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/1.jpg"></div>
+								<div class="lp-thumb set-bg" data-setbg="img/user.png"></div>
 								<div class="lp-content">
 									<h6>what shoes to wear</h6>
 									<span>Oct 21, 2018</span>
@@ -478,7 +554,7 @@
 								</div>
 							</div>
 							<div class="lp-item">
-								<div class="lp-thumb set-bg" data-setbg="img/blog-thumbs/2.jpg"></div>
+								<div class="lp-thumb set-bg" data-setbg="img/user.png"></div>
 								<div class="lp-content">
 									<h6>trends this year</h6>
 									<span>Oct 21, 2018</span>
@@ -543,6 +619,13 @@
 	<script src="js/jquery.zoom.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		function incrementer(){
+			var x=document.getElementById("count").innerHTML;
+			var y=parseFloat(x)+1;
+			document.getElementById("count").innerHTML=y;
+		}
+	</script>
 
 	</body>
 </html>
