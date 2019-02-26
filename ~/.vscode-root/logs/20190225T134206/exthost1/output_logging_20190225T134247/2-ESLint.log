@@ -1,0 +1,111 @@
+[Info  - 11:54:30 PM] ESLint server stopped.
+[Info  - 11:54:31 PM] ESLint server running in node v8.9.3
+[Info  - 11:54:31 PM] ESLint server is running.
+[Info  - 11:54:31 PM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/main.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:01:22 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/cart.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:21:08 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/jquery.zoom.min.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:21:15 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/jquery.slicknav.min.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:21:19 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/jquery.nicescroll.min.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:21:20 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/jquery-ui.min.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:21:23 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/jquery-3.2.1.min.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:21:28 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/bootstrap.min.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:21:32 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/owl.carousel.min.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:21:35 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/map.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:30:29 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/jquery.zoom.min.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.
+[Info  - 12:34:16 AM] 
+Failed to load the ESLint library for the document /opt/lampp/htdocs/divisima/js/map.js
+
+To use ESLint please install eslint by running 'npm install eslint' in the workspace folder divisima
+or globally using 'npm install -g eslint'. You need to reopen the workspace after installing eslint.
+
+If you are using yarn instead of npm set the setting `"eslint.packageManager": "yarn"`
+
+Alternatively you can disable ESLint for the workspace folder divisima by executing the 'Disable ESLint' command.

@@ -189,7 +189,9 @@ $(window).on('load', function() {
 		var $button = $(this);
 		var oldValue = $button.parent().find('input').val();
 		if ($button.hasClass('inc')) {
+			if (oldValue<3)
 			var newVal = parseFloat(oldValue) + 1;
+			else var newVal=3;
 		} else {
 			// Don't allow decrementing below zero
 			if (oldValue > 0) {
