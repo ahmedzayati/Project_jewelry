@@ -17,7 +17,7 @@ function dbConnect()
 function getProductByCath($cathegory)
 {
     $db = dbConnect();
-    $req = $db->query("SELECT * from produit where cathegory='".$cathegory."'");
+    $req = $db->query("SELECT * from produit where categorie='".$cathegory."'");
 
     return $req;
 }

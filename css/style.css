@@ -914,13 +914,16 @@ ol {
 	height: 87px;
 }
 
-.product-item .pi-text h6 {
+/*.product-item .pi-text h6 {
 	float: right;
 	padding-left: 40px;
 	overflow: hidden;
 	font-weight: 700;
 	color: #111111;
-}
+}*/
+.product-item .pi-text  .price{color:#333;font-size:17px;font-family:Montserrat,sans-serif;font-weight:700;letter-spacing:.6px;margin-bottom:8px;text-align:center;transition:all .3s}
+
+.product-item .pi-text .price span{color:#999;font-size:13px;font-weight:400;text-decoration:line-through;margin-left:3px;display:inline-block}
 
 .product-item .pi-text p {
 	font-size: 16px;
@@ -2300,6 +2303,7 @@ ol {
 	}
 	.slicknav_btn {
 		background-color: #565656;
+		
 	}
 	.slicknav_menu {
 		background: #282828;
@@ -2424,3 +2428,12 @@ ol {
 	}
 }
 
+
+/********************* shopping Demo-1 **********************/
+
+.product-item .pi-text .title{font-size:13px;font-weight:400;letter-spacing:.5px;text-transform:capitalize;margin:0 0 0px;transition:all .3s ease 0s;text-align:center;}
+.product-item .pi-text .title a{color:#828282}
+.product-item .pi-text .title a:hover, .title a{color:#ef5777}
+
+@media only screen and (max-width:990px){.product-grid{margin-bottom:10px}
+}

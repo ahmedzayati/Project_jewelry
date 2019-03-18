@@ -1,0 +1,20 @@
+[2019-03-18 00:33:34.625] [exthost] [info] extension host started
+[2019-03-18 00:33:34.660] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-03-18 00:33:34.661] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-03-18 00:33:35.089] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-03-18 00:33:35.089] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-03-18 00:33:35.213] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-03-18 00:33:35.213] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-03-18 00:33:35.863] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-03-18 00:33:35.863] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-03-18 00:33:36.346] [exthost] [info] ExtensionService#_doActivateExtension vscode.search-rg {"startup":true,"activationEvent":"*"}
+[2019-03-18 00:33:36.346] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/search-rg/dist/extension
+[2019-03-18 00:33:37.599] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2019-03-18 00:33:37.599] [exthost] [info] ExtensionService#loadCommonJSModule /home/admed/.vscode/extensions/dbaeumer.vscode-eslint-1.7.2/client/out/extension
+[2019-03-18 00:33:38.759] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2019-03-18 00:33:38.759] [exthost] [info] ExtensionService#loadCommonJSModule /home/admed/.vscode/extensions/hookyqr.beautify-1.4.9/extension
+[2019-03-18 00:33:47.934] [exthost] [info] ExtensionService#_doActivateExtension felixfbecker.php-intellisense {"startup":true,"activationEvent":"workspaceContainsTimeout:**/*.php"}
+[2019-03-18 00:33:47.934] [exthost] [info] ExtensionService#loadCommonJSModule /home/admed/.vscode/extensions/felixfbecker.php-intellisense-2.3.10/out/extension
+[2019-03-18 00:33:48.083] [exthost] [info] ExtensionService#_doActivateExtension vscjava.vscode-maven {"startup":true,"activationEvent":"workspaceContainsTimeout:**/pom.xml"}
+[2019-03-18 00:33:48.083] [exthost] [info] ExtensionService#loadCommonJSModule /home/admed/.vscode/extensions/vscjava.vscode-maven-0.15.1/dist/extension
+[2019-03-18 00:33:49.115] [exthost] [info] eager extensions activated
