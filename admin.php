@@ -132,9 +132,7 @@ else{
                            {    
                            echo '<option value="'.$row['nom_produit'].'">'.$row['nom_produit'].'</option>';
                            
-                           
-                           
-                           
+
                            }
                             $result->closeCursor();
                            ?>
