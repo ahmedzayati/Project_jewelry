@@ -20,7 +20,7 @@
 						<div class="user-panel">
 							<div class="up-item">
 								<i class="flaticon-profile"></i>
-								<a href="#">Sign</a> In or <a href="#">Create Account</a>
+								<a href="./form/index.php">Sign In or Create Account</a>
 							</div>
 							<div class="up-item ml">
 								<div class="shopping-card" >
