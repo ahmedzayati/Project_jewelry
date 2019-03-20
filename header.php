@@ -61,7 +61,7 @@
 					</li>
 					<li><a href="#">Bijoux</a>
 						<ul class="sub-menu">
-							<li><a href="./category.php?categorie=boucles d'oreilles">Boucles d'oreilles</a></li>
+							<li><a href="./category.php?categorie=boucles oreilles">Boucles d'oreilles</a></li>
 							<li><a href="./category.php?categorie=bracelet">Bracelets</a></li>
 							<li><a href="./category.php?categorie=collier">Colliers</a></li>
 							<li><a href="./category.php?categorie=bague">Bagues</a></li>
@@ -89,14 +89,14 @@
             </button>
           </div>
           <div class="modal-body">
-            <table class="show-cart table">
+            <table class="show-cart table" name="tab" id="tab">
               
             </table>
             <div>Total price: $<span class="total-cart"></span></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Order now</button>
+            <button id="order" type="button" class="btn btn-primary">Order now</button>
           </div>
         </div>
       </div>

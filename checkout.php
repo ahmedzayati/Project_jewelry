@@ -1,3 +1,7 @@
+<?php
+session_start();
+$a=json_decode($_POST['name'],true);
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -35,9 +39,17 @@
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
+	<?php
 
-	<!-- Header section -->
-	<?php include 'header.php' ?>
+require "model.php";
+$bdd=dbConnect();
+$_SESSION['panier']=$a;
+
+$insert_image='INSERT INTO produit ( `nom_produit`) VALUES("'.$_SESSION['panier'][0]['name'].'")';
+$rep=$bdd->query($insert_image);
+	
+	 include 'header.php';
+	?>
 
 	<!-- Header section end -->
 
@@ -60,7 +72,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 order-2 order-lg-1">
-					<form class="checkout-form">
+					<form class="checkout-form" action="" method="post">
 						<div class="cf-title">Billing Address</div>
 						<div class="row">
 							<div class="col-md-7">
@@ -92,59 +104,23 @@
 								<input type="text" placeholder="Phone no.">
 							</div>
 						</div>
-						<div class="cf-title">Delievery Info</div>
-						<div class="row shipping-btns">
-							<div class="col-6">
-								<h4>Standard</h4>
-							</div>
-							<div class="col-6">
-								<div class="cf-radio-btns">
-									<div class="cfr-item">
-										<input type="radio" name="shipping" id="ship-1">
-										<label for="ship-1">Free</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-6">
-								<h4>Next day delievery  </h4>
-							</div>
-							<div class="col-6">
-								<div class="cf-radio-btns">
-									<div class="cfr-item">
-										<input type="radio" name="shipping" id="ship-2">
-										<label for="ship-2">$3.45</label>
-									</div>
-								</div>
-							</div>
+							
+						<div id="items">
 						</div>
-						<div class="cf-title">Payment</div>
-						<ul class="payment-list">
-							<li>Paypal<a href="#"><img src="img/paypal.png" alt=""></a></li>
-							<li>Credit / Debit card<a href="#"><img src="img/mastercart.png" alt=""></a></li>
-							<li>Pay when you get the package</li>
-						</ul>
-						<button class="site-btn submit-order-btn">Place Order</button>
+						
+						<button class="site-btn submit-order-btn" type="submit">Place Order</button>
 					</form>
 				</div>
 				<div class="col-lg-4 order-1 order-lg-2">
 					<div class="checkout-cart">
 						<h3>Your Cart</h3>
 						<ul class="product-list">
-							<li>
-								<div class="pl-thumb"><img src="img/cart/1.jpg" alt=""></div>
-								<h6>Animal Print Dress</h6>
-								<p>$45.90</p>
-							</li>
-							<li>
-								<div class="pl-thumb"><img src="img/cart/2.jpg" alt=""></div>
-								<h6>Animal Print Dress</h6>
-								<p>$45.90</p>
-							</li>
+							
 						</ul>
 						<ul class="price-list">
-							<li>Total<span>$99.90</span></li>
+							<li>Total<span id="total"></span></li>
 							<li>Shipping<span>free</span></li>
-							<li class="total">Total<span>$99.90</span></li>
+							<li >Total<span id="total2">$99.90</span></li>
 						</ul>
 					</div>
 				</div>
@@ -169,6 +145,25 @@
 	<script src="js/jquery.zoom.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/cart.js"></script>
 
+<script>
+	var cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+	var out="";
+	for(var i in cart){
+		 out= out+'<li>'+
+								'<div class="pl-thumb"><img src="img/cart/1.jpg" alt=""></div>'+
+								'<h6>'+cart[i].name+'</h6>'+
+								'<p>'+cart[i].price+'DT</p>'+
+							'</li>'
+							$('.product-list').html(out);
+		
+
+	}
+	var total=sessionStorage.getItem('total');
+	$('#total').html(total+" DT");
+	$('#total2').html(total+" DT");
+
+	</script>
 	</body>
 </html>

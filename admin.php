@@ -1,3 +1,11 @@
+<?php 
+session_start();
+
+if ( !isset( $_SESSION['nom_adm'] ) ) {
+  
+ header("location:index.php");exit;}
+else{
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,7 +98,7 @@
                                     <option value="accessoire cheveux">Accessoire cheveux</option>
                                     <option value="collier">Collier</option>
                                     <option value="bague">Bague</option>
-                                    <option value="boucles d'oreilles">Boucles d'oreilles</option>
+                                    <option value="boucles oreilles">Boucles d'oreilles</option>
                                     <option value="ensemble bijoux">Ensemble bijoux</option>
                               </select>
                            </div>
@@ -157,4 +165,4 @@
           modal2.style.display = "none";
         }
       }
-   </script>
+    </script><?php } ?>

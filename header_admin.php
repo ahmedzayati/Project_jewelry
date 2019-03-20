@@ -27,6 +27,12 @@
                                 <button onclick="document.getElementById('id03').style.display='block'" class="btn btn-primary"  >
                                             Inserer produit
                                 </button>							
+								</div>
+							<div class="up-item">
+								
+                                <button   >
+                                            <a href="logout.php">Log Out</a>
+                                </button>							
                                 </div>
 						</div>
 	

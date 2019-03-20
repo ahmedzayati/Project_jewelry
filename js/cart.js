@@ -18,6 +18,7 @@ var shoppingCart = (function() {
   // Save cart
   function saveCart() {
     sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+
   }
   
     // Load cart
@@ -144,6 +145,7 @@ $('.add-to-cart').click(function(event) {
   event.preventDefault();
   var name = $(this).data('name');
   var price = Number($(this).data('price'));
+  // if(cart.length<3)
   shoppingCart.addItemToCart(name, price, 1);
   displayCart();
 });
@@ -159,13 +161,14 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = "";
   for(var i in cartArray) {
-    output += "<tr>"
+    
+    output += "<tr >"
       + "<td>" + cartArray[i].name + "</td>" 
       + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
+      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name='" + cartArray[i].name + "'>-</button>"
+      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'/>"
+      + "<button class='plus-item btn btn-primary input-group-addon' data-name='" + cartArray[i].name + "'>+</button></div></td>"
+      + "<td><button class='delete-item btn btn-danger' data-name='" + cartArray[i].name + "'>X</button></td>"
       + " = " 
       + "<td>" + cartArray[i].total + "</td>" 
       +  "</tr>";
@@ -173,6 +176,8 @@ function displayCart() {
   $('.show-cart').html(output);
   $('.total-cart').html(shoppingCart.totalCart());
   $('.total-count').html(shoppingCart.totalCount());
+  sessionStorage.setItem('total', shoppingCart.totalCart());
+
 }
 
 // Delete item button
@@ -180,6 +185,7 @@ function displayCart() {
 $('.show-cart').on("click", ".delete-item", function(event) {
   var name = $(this).data('name')
   shoppingCart.removeItemFromCartAll(name);
+  console.log(name)
   displayCart();
 })
 
