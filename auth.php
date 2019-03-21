@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	require "../model.php";
+	require "./model.php";
 	$bdd = dbConnect();
 	session_start();
 ?>
@@ -22,11 +22,11 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="../css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="../css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="../css/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="./css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="./css/jquery-ui.min.css"/>
 
-	<link rel="stylesheet" href="./css/style.css"/>
+	<link rel="stylesheet" href="./css/auth.css"/>
 
 </head>
 
@@ -34,28 +34,11 @@
 
 <?php if($_SERVER['REQUEST_METHOD'] =='POST'){
 		if(isset($_POST['login'])){
-			echo("ssssss") ;
+			require "./login.php";
 		}
 		elseif(isset($_POST['signup'])){
 			require "./signup.php";
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-
-
 
 } ?>
  
@@ -77,7 +60,7 @@
 							<div class="col-sm-6 col-12 card-body">
 								<h2 class="title">CRÉEZ VOTRE COMPTE</h2>
 			
-								<form method="POST" action="index.php">
+								<form method="POST" action="auth.php">
 				
 									<div>
 										<input type="text" placeholder="Nom" name="nom" required>
@@ -134,7 +117,7 @@
 							<div class="col-12 col-sm-6 card-body " style="min-height:570px;padding-top:160px" >
 								<div>
 								<h2 class="title">DÉJÀ INSCRIT?</h2>
-								<form method="POST">
+								<form method="POST" action="auth.php">
 									<div>
 										<input  type="email" placeholder="Adresse e-mail" name="email">
 									</div>
@@ -162,12 +145,12 @@
 			
 
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script  src="js/index.js"></script>
+	<script  src="js/auth.js"></script>
 	<!--====== Javascripts & Jquery ======-->
-	<script src="../js/jquery-3.2.1.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/jquery-ui.min.js"></script>
-	<script src="../js/main.js"></script>
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/main.js"></script>
 
 
 </body>
