@@ -1,6 +1,6 @@
 <?php
 session_start();
-$a=json_decode($_POST['name'],true);
+//$a=json_decode($_POST['name'],true);
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -42,11 +42,11 @@ $a=json_decode($_POST['name'],true);
 	<?php
 
 require "model.php";
-$bdd=dbConnect();
-$_SESSION['panier']=$a;
+// $bdd=dbConnect();
+// $_SESSION['panier']=$a;
 
-$insert_image='INSERT INTO produit ( `nom_produit`) VALUES("'.$_SESSION['panier'][0]['name'].'")';
-$rep=$bdd->query($insert_image);
+// $insert_image='INSERT INTO produit ( `nom_produit`) VALUES("'.$_SESSION['panier'][0]['name'].'")';
+// $rep=$bdd->query($insert_image);
 	
 	 include 'header.php';
 	?>
@@ -72,7 +72,7 @@ $rep=$bdd->query($insert_image);
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 order-2 order-lg-1">
-					<form class="checkout-form" action="" method="post">
+					<form class="checkout-form"  >
 						<div class="cf-title">Billing Address</div>
 						<div class="row">
 							<div class="col-md-7">
@@ -93,22 +93,21 @@ $rep=$bdd->query($insert_image);
 						</div>
 						<div class="row address-inputs">
 							<div class="col-md-12">
-								<input type="text" placeholder="Address">
-								<input type="text" placeholder="Address line 2">
-								<input type="text" placeholder="Country">
+								<input type="text" placeholder="Address" id="address" />
+								<input type="text" placeholder="Country" id="country">
 							</div>
 							<div class="col-md-6">
-								<input type="text" placeholder="Zip code">
+								<input type="text" placeholder="Zip code" id="zipcode">
 							</div>
 							<div class="col-md-6">
-								<input type="text" placeholder="Phone no.">
+								<input type="text" placeholder="Phone no." id="phone">
 							</div>
 						</div>
 							
 						<div id="items">
 						</div>
 						
-						<button class="site-btn submit-order-btn" type="submit">Place Order</button>
+						<button class="site-btn submit-order-btn" id="order2">Place Order</button>
 					</form>
 				</div>
 				<div class="col-lg-4 order-1 order-lg-2">
@@ -120,7 +119,7 @@ $rep=$bdd->query($insert_image);
 						<ul class="price-list">
 							<li>Total<span id="total"></span></li>
 							<li>Shipping<span>free</span></li>
-							<li >Total<span id="total2">$99.90</span></li>
+							<li >Total<span id="total2"></span></li>
 						</ul>
 					</div>
 				</div>
@@ -154,7 +153,7 @@ $rep=$bdd->query($insert_image);
 		 out= out+'<li>'+
 								'<div class="pl-thumb"><img src="img/cart/1.jpg" alt=""></div>'+
 								'<h6>'+cart[i].name+'</h6>'+
-								'<p>'+cart[i].price+'DT</p>'+
+								'<p>'+cart[i].price+'DT x '+cart[i].count+'</p>'+
 							'</li>'
 							$('.product-list').html(out);
 		
@@ -163,7 +162,23 @@ $rep=$bdd->query($insert_image);
 	var total=sessionStorage.getItem('total');
 	$('#total').html(total+" DT");
 	$('#total2').html(total+" DT");
+	</script>
+	<script>
 
+	$(document).ready(function(){
+$("#order2").click(function(){
+
+
+
+$.post("commander.php", 
+{ panier:sessionStorage.getItem('shoppingCart'),
+   phone:$("#phone").val(),
+   address:$("#address").val(),
+   zipcode:$("#zipcode").val(),
+   country:$("#country").val()},
+function(response,status){ console.log(JSON.stringify(sessionStorage.getItem('shoppingCart')))
+});
+});});
 	</script>
 	</body>
 </html>

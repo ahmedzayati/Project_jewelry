@@ -96,7 +96,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button id="order" type="button" class="btn btn-primary">Order now</button>
+            <button id="order" type="button" class="btn btn-primary" ><a href="checkout.php">Order now</a></button>
           </div>
         </div>
       </div>

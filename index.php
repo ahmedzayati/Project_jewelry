@@ -266,16 +266,7 @@
 
 	<script src="js/cart.js"></script>
 	<script>
-$(document).ready(function(){
-$("#order").click(function(){
 
-
-
-$.post("checkout.php", 
-{ name:sessionStorage.getItem('shoppingCart')},
-function(response,status){ console.log(JSON.stringify(sessionStorage.getItem('shoppingCart')))
-});
-});});
 
 		
 </script>
