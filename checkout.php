@@ -72,7 +72,7 @@ require "model.php";
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 order-2 order-lg-1">
-					<form class="checkout-form"  >
+					<div class="checkout-form"  >
 						<div class="cf-title">Billing Address</div>
 						<div class="row">
 							<div class="col-md-7">
@@ -108,7 +108,7 @@ require "model.php";
 						</div>
 						
 						<button class="site-btn submit-order-btn" id="order2">Place Order</button>
-					</form>
+					</div>
 				</div>
 				<div class="col-lg-4 order-1 order-lg-2">
 					<div class="checkout-cart">
@@ -144,14 +144,14 @@ require "model.php";
 	<script src="js/jquery.zoom.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/cart.js"></script>
+	<script src="js/cart.js"></script>	
 
 <script>
 	var cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
 	var out="";
 	for(var i in cart){
 		 out= out+'<li>'+
-								'<div class="pl-thumb"><img src="img/cart/1.jpg" alt=""></div>'+
+								'<div class="pl-thumb"><img src="img/'+cart[i].name+'" alt=""></div>'+
 								'<h6>'+cart[i].name+'</h6>'+
 								'<p>'+cart[i].price+'DT x '+cart[i].count+'</p>'+
 							'</li>'
@@ -176,7 +176,7 @@ $.post("commander.php",
    address:$("#address").val(),
    zipcode:$("#zipcode").val(),
    country:$("#country").val()},
-function(response,status){ console.log(JSON.stringify(sessionStorage.getItem('shoppingCart')))
+function(response,status){ alert("Votre commande est confirmée")
 });
 });});
 	</script>
