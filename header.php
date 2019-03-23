@@ -12,7 +12,7 @@
 					</div>
 					<div class="col-xl-5 col-lg-4">
 						<form class="header-search-form">
-							<input type="text" placeholder="Search on divisima ....">
+							<input type="text" placeholder="Search on Accessoiry ....">
 							<button><i class="flaticon-search"></i></button>
 						</form>
 					</div>
