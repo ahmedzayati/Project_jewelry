@@ -1,7 +1,6 @@
 <?php 
 session_start();
-            require "model.php";
-
+    require "model.php";
     if(isset($_POST['nom_adm']) && isset($_POST['pass_adm'])){
             $bdd=dbConnect();
 
