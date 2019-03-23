@@ -21,7 +21,13 @@ function getProductByCath($cathegory)
 
     return $req;
 }
+function getProduct($product)
+{
+    $db = dbConnect();
+    $req = $db->query("SELECT * from produit where nom_produit='".$product."'");
 
+    return $req;
+}
 function getPost($postId)
 {
     $db = dbConnect();

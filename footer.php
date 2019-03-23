@@ -8,7 +8,7 @@
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget about-widget">
 						<h2 >About</h2>
-						<p style="color:#264e70;">Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
+						<p >Donec vitae purus nunc. Morbi faucibus erat sit amet congue mattis. Nullam frin-gilla faucibus urna, id dapibus erat iaculis ut. Integer ac sem.</p>
 						<img src="img/cards.png" alt="">
 					</div>
 				</div>

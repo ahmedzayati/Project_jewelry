@@ -195,10 +195,11 @@
 				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
 					<div class="row">
 					<?php
-                        $bdd = dbConnect();
-                        $query = "SELECT * from produit where categorie='".$_GET['categorie']."'";
-                         $result = $bdd->query($query); 
-                         while($row=$result->fetch())
+						$bdd = dbConnect();
+						if(isset($_GET['categorie']))
+						$result = getProductByCath($_GET['categorie']);
+						else $result = getProductByCath('bracelet');
+						while($row=$result->fetch())
                         {
                         ?>
 						<div class="col-lg-4 col-sm-6">
