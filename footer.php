@@ -1,10 +1,55 @@
 	<!-- Footer section -->
-	<section class="footer-section">
+	<section class="footer-section test" >
 		<div class="container">
+		
 			<div class="footer-logo text-center">
 				<a href="index.php"><img src="./img/logo.png" alt=""></a>
 			</div>
-			<div class="row">
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-4">
+						<h4>Say Hello !!</h4> 
+						<div >
+							<input class="getInTouch_input" type="text" placeholder="Nom" name="nom" required>
+						</div>
+						<div> 
+							<input class="getInTouch_input" type="email" placeholder="Adresse e-mail" name="email" required>
+						</div>
+						<div>
+							<input  class="getInTouch_input" type="text" placeholder="Objet" name="objet" required>
+						</div>
+						<div>
+							<textarea  class="getInTouch_textArea" type="text" placeholder="Message" name="msg" required></textarea>
+						</div>
+
+					</div>
+
+					<div class="col-12 col-md-6 offset-lg-4 col-lg-4">
+						<h4>Nos Cathegorie</h4> 
+						<button href"" class="signup-footer" >Accessoires Femmes</button>
+						<button href"" class="signup-footer" >Bijoux</button>
+						<button href"" class="signup-footer" >Montres</button>
+
+						<h4 style="margin-top:30px">Nos Cathegorie</h4> 
+
+						<button href"" class="signup-footer" >Créer Un Compte</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="social-links-warp">
+			<div class="container">
+				<div class="social-links col-12  offset-lg-3 col-xl-6 offset-xl-3">
+					<a href="" class="instagram social"><i class="fa fa-instagram"></i><span class="social-text">instagram</span></a>
+					<a href="" class="google-plus social"><i class="fa fa-google-plus"></i><span class="social-text">g+plus</span></a>
+					<a href="" class="facebook social"><i class="fa fa-facebook"></i><span class="social-text">facebook</span></a>
+				</div>
+				<p class="made-text text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Ahmed_&_Bilel</a></p>
+			</div>
+		</div>
+	</section>
+			<!-- <div class="row">
 				<div class="col-lg-3 col-sm-6">
 					<div class="footer-widget about-widget">
 						<h2 >About</h2>
@@ -77,24 +122,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="social-links-warp">
-			<div class="container">
-				<div class="social-links">
-					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="" class="google-plus"><i class="fa fa-google-plus"></i><span>g+plus</span></a>
-					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
-					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
-					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
-				</div>
+		</div> -->
+		
 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> 
-<p class="text-white text-center mt-5">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-			</div>
-		</div>
-	</section>
 	<!-- Footer section end -->

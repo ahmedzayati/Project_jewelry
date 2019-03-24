@@ -48,8 +48,8 @@ else
             $mail->Host = "smtp.gmail.com";
             $mail->Port = 465; // or 587
             $mail->IsHTML(true);
-            $mail->Username = "bilelmek@gmail.com";
-            $mail->Password = "huuuhj1256";
+            $mail->Username = "accessoiryyy@gmail.com";
+            $mail->Password = "gyyyg1256";
             $mail->SetFrom("bilelmek@gmail.com");
             $mail->Subject =  $subject;
             $mail->Body =   $message_body;
