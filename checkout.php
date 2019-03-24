@@ -26,7 +26,7 @@ session_start();
 	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
 	<link rel="stylesheet" href="css/animate.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
-
+	<link rel="stylesheet" href="css/breadcrumb.css"/>
 
 	<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -66,7 +66,13 @@ require "model.php";
 	</div>
 	<!-- Page info end -->
 
-
+<br>
+<ul class="bc">
+  <li class="bc_item "></li>
+  <li class="bc_item bc_complete"></li>
+  <li class="bc_item"></li>
+  
+</ul>
 	<!-- checkout section  -->
 	<section class="checkout-section spad">
 		<div class="container">
@@ -94,13 +100,17 @@ require "model.php";
 						<div class="row address-inputs">
 							<div class="col-md-12">
 								<input type="text" placeholder="Address" id="address" />
-								<input type="text" placeholder="Country" id="country">
+								
 							</div>
 							<div class="col-md-6">
-								<input type="text" placeholder="Zip code" id="zipcode">
+							<input type="text" placeholder="Pays" id="pays" name="pays">							</div>
+							<div class="col-md-6">
+							<input type="text" placeholder="Ville" id="ville" name="ville">							</div>
+							<div class="col-md-6">
+								<input type="text" placeholder="Zip code" id="zipcode" name="zipcode">
 							</div>
 							<div class="col-md-6">
-								<input type="text" placeholder="Phone no." id="phone">
+								<input type="text" placeholder="Téléphone no." id="telephone" name="telephone">
 							</div>
 						</div>
 							
@@ -172,11 +182,14 @@ $("#order2").click(function(){
 
 $.post("commander.php", 
 { panier:sessionStorage.getItem('shoppingCart'),
-   phone:$("#phone").val(),
+   telephone:$("#telephone").val(),
    address:$("#address").val(),
    zipcode:$("#zipcode").val(),
-   country:$("#country").val()},
-function(response,status){ alert("Votre commande est confirmée")
+   pays:$("#pays").val(),
+   ville:$("#ville").val()
+
+   },
+function(response,status){ 
 });
 });});
 	</script>

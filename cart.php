@@ -22,6 +22,7 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css"/>
       <link rel="stylesheet" href="css/animate.css"/>
       <link rel="stylesheet" href="css/style.css"/>
+      <link rel="stylesheet" href="css/breadcrumb.css"/>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -44,101 +45,48 @@
          </div>
       </div>
       <!-- Page info end -->
+<br>
+<ul class="bc">
+  <li class="bc_item bc_complete"></li>
+  <li class="bc_item"></li>
+  <li class="bc_item"></li>
+  
+</ul>
+
+ 
+
       <!-- cart section end -->
       <section class="cart-section spad">
          <div class="container">
             <div class="row">
-               <div class="col-lg-8">
+               <div class="col-lg-8 ">
+               <div class="cf-title">Your cart</div>
                   <div class="cart-table">
-                     <h3>Your Cart</h3>
+                     
                      <div class="cart-table-warp">
                         <table>
                            <thead>
                               <tr>
                                  <th class="product-th">Product</th>
                                  <th class="quy-th">Quantity</th>
-                                 <th class="size-th">SizeSize</th>
+                                 <th class="size-th">Prix uni</th>
                                  <th class="total-th">Price</th>
                               </tr>
                            </thead>
-                           <tbody>
-                              <tr>
-                                 <td class="product-col">
-                                    <img src="img/cart/1.jpg" alt="">
-                                    <div class="pc-title">
-                                       <h4>Animal Print Dress</h4>
-                                       <p>$45.90</p>
-                                    </div>
-                                 </td>
-                                 <td class="quy-col">
-                                    <div class="quantity">
-                                       <div class="pro-qty">
-                                          <input type="text" value="1" >
-                                       </div>
-                                    </div>
-                                 </td>
-                                 <td class="size-col">
-                                    <h4>Size M</h4>
-                                 </td>
-                                 <td class="total-col">
-                                    <h4>$45.90</h4>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td class="product-col">
-                                    <img src="img/cart/2.jpg" alt="">
-                                    <div class="pc-title">
-                                       <h4>Ruffle Pink Top</h4>
-                                       <p>$45.90</p>
-                                    </div>
-                                 </td>
-                                 <td class="quy-col">
-                                    <div class="quantity">
-                                       <div class="pro-qty">
-                                          <input type="text" value="1">
-                                       </div>
-                                    </div>
-                                 </td>
-                                 <td class="size-col">
-                                    <h4>Size M</h4>
-                                 </td>
-                                 <td class="total-col">
-                                    <h4>$45.90</h4>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td class="product-col">
-                                    <img src="img/cart/3.jpg" alt="">
-                                    <div class="pc-title">
-                                       <h4>Skinny Jeans</h4>
-                                       <p>$45.90</p>
-                                    </div>
-                                 </td>
-                                 <td class="quy-col">
-                                    <div class="quantity">
-                                       <div class="pro-qty">
-                                          <input type="text" value="1">
-                                       </div>
-                                    </div>
-                                 </td>
-                                 <td class="size-col">
-                                    <h4>Size M</h4>
-                                 </td>
-                                 <td class="total-col">
-                                    <h4>$45.90</h4>
-                                 </td>
-                              </tr>
+                           <tbody id="bodyCart">
+                             
+                              
                            </tbody>
                         </table>
                      </div>
                      <div class="total-cost">
-                        <h6>Total <span>$99.90</span></h6>
+                        <h6 id="total">Total <span></span></h6>
                      </div>
                   </div>
                </div>
                <div class="col-lg-4 card-right">
-                  <a href="checkout.html" class="site-btn">Proceed to checkout</a>
-                  <a href="" class="site-btn sb-dark">Continue shopping</a>
+                  <a href="checkout.php" class="site-btn">Proceed to checkout</a>
+                  <a href="index.php" class="site-btn sb-dark">Continue shopping</a>
                </div>
             </div>
          </div>
@@ -183,5 +131,38 @@
       <script src="js/jquery.zoom.min.js"></script>
       <script src="js/jquery-ui.min.js"></script>
       <script src="js/main.js"></script>
+      <script src="js/cart.js"></script>
+
+      <script>
+        var cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+	    var out="";
+	    for(var i in cart){
+            out= out+'<tr>'+
+                                 '<td class="product-col">'+
+                                    '<img src="img/'+cart[i].name+'" alt="">'+
+                                    '<div class="pc-title">'+
+                                    '<h4>'+cart[i].name+'</h4>'+
+                                       '<p>'+cart[i].price+' DT</p>'+
+                                    '</div>'+
+                                 '</td>'+
+                                 '<td class="quy-col">'+
+                                    '<div class="quantity">'+
+                                       '<div class="pro-qty">'+
+                                          '<input type="text" value="'+cart[i].count+'" >'+
+                                       '</div>'+
+                                    '</div>'+
+                                 '</td>'+
+                                '<td class="size-col">'+
+                                    '<h4>'+cart[i].price+' DT</h4>'+
+                                 '</td>'+
+                                 '<td class="total-col">'+
+                                    '<h4>'+parseFloat(cart[i].price)*parseFloat(cart[i].count)+'</h4>'+
+                                 '</td>'+
+                              '</tr>';
+                              $('#bodyCart').html(out);
+        }
+        var total=sessionStorage.getItem('total');
+	$('#total').html(total+" DT");
+      </script>
    </body>
 </html>

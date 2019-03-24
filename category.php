@@ -213,7 +213,7 @@
                         </div>
                         <div class="pi-text">
                            <h6 class="price"><?php  echo $row['prix']; ?> DT</h6>
-                           <p class="title"><a href="#"><?php  echo $row['nom_produit']; ?> </a></p>
+                           <p class="title"><a href="product.php?nom_produit=<?php  echo $row['nom_produit']; ?>"><?php  echo $row['nom_produit']; ?> </a></p>
                         </div>
                      </div>
 						</div>

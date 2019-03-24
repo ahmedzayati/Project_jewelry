@@ -17,15 +17,19 @@ function dbConnect()
 function getProductByCath($cathegory)
 {
     $db = dbConnect();
-    $req = $db->query("SELECT * from produit where categorie='".$cathegory."'");
-
+    $req = $db->prepare("SELECT * from produit where categorie=?");
+    $req->execute([$cathegory]);
     return $req;
+
+
+    
+    
 }
 function getProduct($product)
 {
     $db = dbConnect();
-    $req = $db->query("SELECT * from produit where nom_produit='".$product."'");
-
+    $req = $db->prepare("SELECT * from produit where nom_produit=?");
+    $req->execute([$product]);
     return $req;
 }
 function getPost($postId)

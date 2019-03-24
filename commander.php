@@ -2,35 +2,41 @@
 session_start();
 $panier=json_decode($_POST['panier'],true);
 $address=$_POST['address'];
-$country=$_POST['country'];
+$pays=$_POST['pays'];
 $zipcode=$_POST['zipcode'];
-$phone=$_POST['phone'];
+$telephone=$_POST['telephone'];
 $date = date('Y-m-d H:i:s');
-
+$ville=$_POST['ville'];
 require "model.php";
 $bdd =dbConnect();
-$id="select * from utilisateurs where email='".$_SESSION['email']."'";
-$t=$bdd->query($id);
+
+
+
+$id=$bdd->prepare("select * from utilisateurs where email=?");
+$t=$id->execute([$_SESSION['email']]);
 while($user=$t->fetch()){$usr= $user['Id'];} echo "<br>";
-$q='select max(id_commande) from commande';
-$r=$bdd->query($q);
+
+
+
+$q=$bdd->prepare('select max(id_commande) from commande');
+$r=$q->execute();
 while($cmd=$r->fetch())$n=1+ $cmd[0];
 
-$insertcommande="INSERT INTO `commande`(`id_commande`, `id_user`) VALUES ('$n','$usr')";
-$rep=$bdd->query($insertcommande);
+$insertcommande=$bdd->prepare("INSERT INTO `commande`(`id_commande`, `date_commande`, `id_user`, `address`, `telephone`, `pays`, `ville`, `zipcode`) VALUES (?,?,?,?,?,?,?,?)");
+$insertcommande->execute([$n,$date,$usr,$address,$telephone,$pays,$ville,$zipcode]);
 
 
 
 for($i=0;$i<sizeof($panier);$i++){
 
 
-    $idp="select * from produit where nom_produit='".$panier[$i]['name']."'";
-    $tp=$bdd->query($idp);
+    $idp=$bdd->prepare("select * from produit where nom_produit=?");
+    $tp=$$idp->execute([$panier[$i]['name']]);
     while($product=$tp->fetch()){$pr= $product[0];}
 
-$insertassoc="INSERT INTO comm_prod(`id_comm`, `id_prod`, `quantite`) VALUES ('$n','$pr','".$panier[$i]['count']."')";
+$insertassoc=$bdd->prepare("INSERT INTO comm_prod(`id_comm`, `id_prod`, `quantite`) VALUES (?,?,?)");
 //$products='select * from produit where nom_produit="'.$panier[0]['name'].'")';
-$rep1=$bdd->query($insertassoc);
+$rep1=$insertassoc->execute([$n,$pr,$panier[$i]['count']]);
 }
 
 ?>
