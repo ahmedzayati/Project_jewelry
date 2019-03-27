@@ -189,7 +189,7 @@ $.post("commander.php",
    ville:$("#ville").val()
 
    },
-function(response,status){ 
+function(response,status){ console.log("ok")
 });
 });});
 	</script>

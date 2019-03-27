@@ -25,6 +25,12 @@ function getProductByCath($cathegory)
     
     
 }
+function topSelling(){
+    $db = dbConnect();
+    $req = $db->prepare("SELECT * from produit order by vendu desc limit 4");
+    $req->execute();
+    return $req;
+}
 function getProduct($product)
 {
     $db = dbConnect();

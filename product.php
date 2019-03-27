@@ -203,7 +203,7 @@ while($row2=$result2->fetch() ){
 						<p><?php echo $row2['nom_produit'] ?> </p>
 					</div>
 				</div>
-				<?php } ?>
+				<?php }$result2->closeCursor(); ?>
 			</div>
 		</div>
 	</section>
