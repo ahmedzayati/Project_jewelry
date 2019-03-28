@@ -146,6 +146,45 @@ else{
                         
                   </form>
                      </div>
+
+
+<div class="row">
+  <div class="col-10">
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id commande</th>
+      <th scope="col">Nom utilisateur</th>
+      <th scope="col">Email</th>
+      <th scope="col">Date</th>
+      <th scope="col"></th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  <?php 
+        $bdd=dbConnect();
+        $commande=$bdd->prepare("select * from commande c,utilisateurs e where c.id_user=e.Id");
+        $commande->execute();
+        while($com=$commande->fetch())
+                          {
+  ?>
+    <tr>
+      <th scope="row"><?php echo $com['id_commande'] ?></th>
+      <td><?php echo $com['Nom'] ?></td>
+      <td><?php echo $com['Email'] ?></td>
+      <td><?php echo $com['date_commande'] ?></td>
+      <td><a href="commande.php?id=<?php echo $com['id_commande'] ?>" >Voir detail</a></td>
+    </tr>
+                        <?php } $commande->closeCursor(); ?>
+  </tbody>
+</table>
+  </div>
+
+</div>
+
+
+    
 </body>
 </html>
 <script>

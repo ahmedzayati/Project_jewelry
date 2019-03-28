@@ -10,13 +10,13 @@
 							<img style="height:80px;width:80px" src="" alt="">
 						</a>
 					</div>
-					<div class="col-xl-5 col-lg-4">
+					<div class="col-xl-3 col-lg-3">
 						<form class="header-search-form">
 							<input type="text" placeholder="Search on divisima ....">
 							<button><i class="flaticon-search"></i></button>
 						</form>
 					</div>
-					<div class="col-xl-5 col-lg-6">
+					<div class="col-xl-7 col-lg-6">
 						<div class="user-panel">
 							
 							<div class="up-item ml">
@@ -26,6 +26,12 @@
 								
                                 <button onclick="document.getElementById('id03').style.display='block'" class="btn btn-primary"  >
                                             Inserer produit
+                                </button>							
+								</div>
+								<div class="up-item">
+								
+                                <button class="btn btn-primary">
+								<a href="message.php">Consulter messages</a>
                                 </button>							
 								</div>
 							<div class="up-item">
