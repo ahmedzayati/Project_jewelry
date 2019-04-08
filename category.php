@@ -70,25 +70,26 @@
 					<div class="filter-widget">
 						<h2 class="fw-title">Categories</h2>
 						<ul class="category-menu">
-							<li><a href="#">Woman wear</a>
+							<li><a href="#">Accessoires femme</a>
 								<ul class="sub-menu">
-									<li><a href="#">Midi Dresses <span>(2)</span></a></li>
-									<li><a href="#">Maxi Dresses<span>(56)</span></a></li>
-									<li><a href="#">Prom Dresses<span>(36)</span></a></li>
-									<li><a href="#">Little Black Dresses <span>(27)</span></a></li>
-									<li><a href="#">Mini Dresses<span>(19)</span></a></li>
+									<li><a href="#">Echarpes </a></li>
+									<li><a href="#">Accessoires cheuveux</a></li>
+									<li><a href="#">Ceintures</a></li>
+									<li><a href="#">Gants</a></li>
 								</ul>
 							</li>
-							<li><a href="#">Man Wear</a>
+							<li><a href="#">Bijoux</a>
 								<ul class="sub-menu">
-									<li><a href="#">Midi Dresses <span>(2)</span></a></li>
-									<li><a href="#">Maxi Dresses<span>(56)</span></a></li>
-									<li><a href="#">Prom Dresses<span>(36)</span></a></li>
+								<li><a href="#">Boucles d'oreilles<span>(36)</span></a></li>
+
+									<li><a href="#">Bracelets <span>(2)</span></a></li>
+									<li><a href="#">Colliers<span>(56)</span></a></li>
+									<li><a href="#">Bagues<span>(36)</span></a></li>
+									<li><a href="#">Ensembles des bijoux<span>(36)</span></a></li>
+
 								</ul></li>
-							<li><a href="#">Children</a></li>
-							<li><a href="#">Bags & Purses</a></li>
-							<li><a href="#">Eyewear</a></li>
-							<li><a href="#">Footwear</a></li>
+							<li><a href="#">Montres</a></li>
+							
 						</ul>
 					</div>
 					<div class="filter-widget mb-0">
@@ -110,76 +111,8 @@
                             </div>
                         </div>
 					</div>
-					<div class="filter-widget mb-0">
-						<h2 class="fw-title">color by</h2>
-						<div class="fw-color-choose">
-							<div class="cs-item">
-								<input type="radio" name="cs" id="gray-color">
-								<label class="cs-gray" for="gray-color">
-									<span>(3)</span>
-								</label>
-							</div>
-							<div class="cs-item">
-								<input type="radio" name="cs" id="orange-color">
-								<label class="cs-orange" for="orange-color">
-									<span>(25)</span>
-								</label>
-							</div>
-							<div class="cs-item">
-								<input type="radio" name="cs" id="yollow-color">
-								<label class="cs-yollow" for="yollow-color">
-									<span>(112)</span>
-								</label>
-							</div>
-							<div class="cs-item">
-								<input type="radio" name="cs" id="green-color">
-								<label class="cs-green" for="green-color">
-									<span>(75)</span>
-								</label>
-							</div>
-							<div class="cs-item">
-								<input type="radio" name="cs" id="purple-color">
-								<label class="cs-purple" for="purple-color">
-									<span>(9)</span>
-								</label>
-							</div>
-							<div class="cs-item">
-								<input type="radio" name="cs" id="blue-color" checked="">
-								<label class="cs-blue" for="blue-color">
-									<span>(29)</span>
-								</label>
-							</div>
-						</div>
-					</div>
-					<div class="filter-widget mb-0">
-						<h2 class="fw-title">Size</h2>
-						<div class="fw-size-choose">
-							<div class="sc-item">
-								<input type="radio" name="sc" id="xs-size">
-								<label for="xs-size">XS</label>
-							</div>
-							<div class="sc-item">
-								<input type="radio" name="sc" id="s-size">
-								<label for="s-size">S</label>
-							</div>
-							<div class="sc-item">
-								<input type="radio" name="sc" id="m-size"  checked="">
-								<label for="m-size">M</label>
-							</div>
-							<div class="sc-item">
-								<input type="radio" name="sc" id="l-size">
-								<label for="l-size">L</label>
-							</div>
-							<div class="sc-item">
-								<input type="radio" name="sc" id="xl-size">
-								<label for="xl-size">XL</label>
-							</div>
-							<div class="sc-item">
-								<input type="radio" name="sc" id="xxl-size">
-								<label for="xxl-size">XXL</label>
-							</div>
-						</div>
-					</div>
+					
+					
 					<div class="filter-widget">
 						<h2 class="fw-title">Brand</h2>
 						<ul class="category-menu">

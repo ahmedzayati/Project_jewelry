@@ -166,14 +166,14 @@
 <div class="container">
 <div class="row">
 	
-	<div class="col-9">
+	<div class="col-9 offset-1">
 	<div class="row">
 	<div class="col-3  pr-0 pl-0">
 	<div class="card">
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+  <img class="card-img-top" src="img/bracelet.jpg" alt="Card image cap">
   <a href="#!">
 	<div class="mask rgba-white-slight"></div>
   </a>
@@ -189,7 +189,7 @@
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src="https://static.lexpress.fr/medias_11391/w_1320,c_limit,g_north/v1488213309/bague-de-fiancailles-ruban-chanel_5832681.jpg" alt="Card image cap">
+  <img class="card-img-top" src="img/bague.jpg" alt="Card image cap">
   <a href="#!">
 	<div class="mask rgba-white-slight"></div>
   </a>
@@ -207,7 +207,7 @@
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+  <img class="card-img-top" src="img/collier.jpg" alt="Card image cap">
   <a href="#!">
 	<div class="mask rgba-white-slight"></div>
   </a>
@@ -227,7 +227,7 @@
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+  <img class="card-img-top" src="img/boucles.jpg" alt="Card image cap">
   <a href="#!">
 	<div class="mask rgba-white-slight"></div>
   </a>
@@ -242,7 +242,7 @@
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+  <img class="card-img-top" src="img/gants.jpg" alt="Card image cap">
   <a href="#!">
 	<div class="mask rgba-white-slight"></div>
   </a>
@@ -256,7 +256,7 @@
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+  <img class="card-img-top" src="img/echarpe.jpg" alt="Card image cap">
   <a href="#!">
 	<div class="mask rgba-white-slight"></div>
   </a>
@@ -270,7 +270,7 @@
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+  <img class="card-img-top" src="img/ceinture.jpg" alt="Card image cap">
   <a href="#!">
 	<div class="mask rgba-white-slight"></div>
   </a>
@@ -284,7 +284,7 @@
 
 <!-- Card image -->
 <div class="view overlay">
-  <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+  <img class="card-img-top" src="img/montre.jpg" alt="Card image cap">
   <a href="#!">
 	<div class="mask rgba-white-slight"></div>
   </a>
@@ -358,7 +358,7 @@
 	<div class="row" id="result_para">
 	<?php
                         $bdd = dbConnect();
-                        $req = $bdd->prepare("SELECT * from produit order by vendu desc limit 0,2");
+                        $req = $bdd->prepare("SELECT * from produit order by vendu desc limit 0,4");
     					$req->execute();
                          //$result = topSelling(); 
                          while($row=$req->fetch())
@@ -367,7 +367,7 @@
 						<div class="col-3">
                      <div class="product-item" style="border:1px solid rgba(0,0,0,.1);border-radius:15px">
                         <div class="pi-pic">
-                           <img style="border-radius:15px 15px 0 0;" <?php echo 'src="data:image/jpeg;base64,'.base64_encode($row['image']).'"' ?>alt="">
+                           <img style="border-radius:15px 15px 0 0;width:100%" <?php echo 'src="data:image/jpeg;base64,'.base64_encode($row['image']).'"' ?>alt="">
                            <div class="pi-links">
                               <a href="#" class="add-card add-to-cart" data-name="<?php  echo $row['nom_produit']; ?>" data-price="<?php  echo $row['prix']; ?>" ><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                               <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>

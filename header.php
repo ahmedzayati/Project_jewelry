@@ -1,5 +1,9 @@
+<?php if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }  ?>
 	<!-- Header section -->
-
+<?php if (isset($_SESSION['email']))echo $_SESSION['email']; ?>
 <header style="background-color:#ffcbc5;" class="header-section">
 		<div class="header-top">
 			<div class="container">
@@ -10,31 +14,40 @@
 							<img style="height:80px;width:80px" src="" alt="">
 						</a>
 					</div>
-					<div class="col-xl-5 col-lg-4">
+					<div class="col-xl-4 col-lg-4">
 						<form class="header-search-form">
 							<input type="text" placeholder="Search on Accessoiry ....">
 							<button><i class="flaticon-search"></i></button>
 						</form>
 					</div>
-					<div class="col-xl-5 col-lg-6">
+					<div class="col-xl-6 col-lg-6">
 						<div class="user-panel">
-							<div class="up-item">
-								<i class="flaticon-profile"></i>
-								<a href="./auth.php">Sign In or Create Account</a>
-							</div>
-							<div class="up-item ml">
+						<div class="up-item ml">
 								<div class="shopping-card" >
 									<i class="flaticon-bag"></i>
 									<span class="total-count"></span>
 								</div>
 								<a href="#" data-toggle="modal" data-target="#cart"> Shopping Cart</a>
 							</div>
-							<div class="up-item">
+							<div class="up-item ml">
 								<div class="shopping-card">
 									<i class="fa fa-info" aria-hidden="true"></i>
 								</div>
 								<a href="contact.php">About us</a>
 							</div>
+						<?php if(!isset($_SESSION['email'])){ ?>
+							<div class="up-item">
+								<i class="flaticon-profile"></i>
+								<a href="./auth.php">Sign In or Create Account</a>
+							</div>
+							<?php } ?>
+							
+							<?php if(isset($_SESSION['email'])){ ?>
+							<div class="up-item ">
+								<i class="flaticon-profile"></i>
+								<a href="./logout.php">LOGOUT</a>
+							</div>
+							<?php } ?>
 						</div>
 	
 					</div>

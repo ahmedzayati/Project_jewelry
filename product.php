@@ -75,7 +75,7 @@
 					<div class="product-thumbs" tabindex="1" style="overflow: hidden; outline: none;">
 						<div class="product-thumbs-track">
 							<div class="pt active" data-imgbigurl="img/<?php echo $_GET['nom_produit'] ?>"><img src="img/<?php echo $_GET['nom_produit'] ?>" alt=""></div>
-							<div class="pt" data-imgbigurl="img/single-product/4.jpg"><img src="img/single-product/thumb-4.jpg" alt=""></div>
+							<!-- <div class="pt" data-imgbigurl="img/single-product/4.jpg"><img src="img/single-product/thumb-4.jpg" alt=""></div> -->
 						</div>
 					</div>
 				</div>
@@ -132,7 +132,7 @@
 							</div>
 							<div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 								<div class="panel-body">
-									<p>Lorem ipsum dolor sit amet, </p>
+									<p><?php echo $row['description']?> </p>
 								</div>
 							</div>
 						</div>
@@ -143,7 +143,7 @@
 							<div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
 								<div class="panel-body">
 									<img src="./img/cards.png" alt="">
-									<p>Lorem ipsum dolor sit amet, </p>
+									<p> </p>
 								</div>
 							</div>
 						</div>

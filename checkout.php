@@ -1,6 +1,7 @@
 <?php
 session_start();
 //$a=json_decode($_POST['name'],true);
+if(!isset($_SESSION['email'])){ header("location:signToComplete.php");exit;}
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -11,7 +12,6 @@ session_start();
 	<meta name="keywords" content="divisima, eCommerce, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Favicon -->
-	<link href="img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -189,7 +189,8 @@ $.post("commander.php",
    ville:$("#ville").val()
 
    },
-function(response,status){ console.log("ok")
+function(response,status){ window.location.href = "http://localhost/divisima/succesCommande.php#";
+
 });
 });});
 	</script>

@@ -14,7 +14,7 @@ $bdd =dbConnect();
 
 $id=$bdd->prepare("select * from utilisateurs where email=?");
 $id->execute([$_SESSION['email']]);
-if($user = $id->fetch()) {$usr=$user['Id'];}
+if($user = $id->fetch()) {$usr=$user['Id'];}$id->closeCursor();
 
  
 
@@ -22,7 +22,7 @@ if($user = $id->fetch()) {$usr=$user['Id'];}
 
 $q=$bdd->prepare('select max(id_commande) from commande');
 $q->execute();
-while($cmd=$q->fetch())$n=1+ $cmd[0];$idp->closeCursor();
+while($cmd=$q->fetch())$n=1+ $cmd[0];$q->closeCursor();
 
 $insertcommande=$bdd->prepare("INSERT INTO `commande`(`id_commande`, `id_user`, `address`, `telephone`, `pays`, `ville`, `zipcode`) VALUES (?,?,?,?,?,?,?)");
 $insertcommande->execute([$n,$usr,$address,$telephone,$pays,$ville,$zipcode]);

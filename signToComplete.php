@@ -32,20 +32,11 @@
 
 <body class="bg-gra-01">
 
-<?php if($_SERVER['REQUEST_METHOD'] =='POST'){
-		if(isset($_POST['login'])){
-			require "./login.php";
-		}
-		elseif(isset($_POST['signup'])){
-			require "./signup.php";
-		}
-		
-} 
-require "./authView.php";
+<center><h2>Se connecter ou créer un compte pour passer votre commande</h2></center>
+
+<?php
+		require "./authView.php";
 ?>
- 
-	
-			
 
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script  src="js/auth.js"></script>
@@ -59,4 +50,3 @@ require "./authView.php";
 </body>
 
 </html>
-
