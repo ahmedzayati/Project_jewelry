@@ -70,51 +70,7 @@ else{
             <input type="submit" value="inserer" />
 
     </form> -->
-    <div id="id03" class="modal" >
-                     <span onclick="document.getElementById('id03').style.display='none'" >&times;</span>
-    <form method="POST" action="ins.php" enctype="multipart/form-data" style="padding: 20px;" class="modal-content animate form-row">
-                        <div class="form-row">
-                           <div class="form-group col-md-4" >
-                              <label for="nom_produit">Nom produit</label>
-                              <input type="text"  id="nom_produit" aria-describedby="emailHelp" class="form-control" placeholder="Name" name="nom_produit" required maxlength="30">
-                           </div>
-                           <div class="form-group col-md-4">
-                              <label for="prix">prix</label>
-                              <input type="number"  id="prix" aria-describedby="emailHelp" class="form-control" placeholder="prix" name="prix" required maxlength="5">
-                           </div>
-                           <div class="form-group col-md-4">
-                              <label for="prix_promotion">prix</label>
-                              <input type="number"  id="prix_promotion" aria-describedby="emailHelp" class="form-control" placeholder="prix_promotion" name="prix_promotion" required maxlength="5">
-                           </div>
-                        </div>
-                        <div class="form-row">
-                           <div class="form-group col-md-6">
-                              <label for="categorie" >Choisir categorie</label>
-                              <select   id="categorie" name="categorie" class="form-control">
-                                    <option value="bracelet">Bracelet</option>
-                                    <option value="echarpe">Echarpe</option>
-                                    <option value="ceinture">Ceinture</option>
-                                    <option value="gant">Gant</option>
-                                    <option value="accessoire cheveux">Accessoire cheveux</option>
-                                    <option value="collier">Collier</option>
-                                    <option value="bague">Bague</option>
-                                    <option value="boucles oreilles">Boucles d'oreilles</option>
-                                    <option value="ensemble bijoux">Ensemble bijoux</option>
-                              </select>
-                           </div>
-                           
-                        </div>
-                        
-                        <input type="file" name="image"  class="form-control-file">
-                        <div class="form-row">
-                           <div class="form-group col-md-10">
-                              <label for="verify" >Description</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" required ></textarea>                                
-                           </div>
-                        </div>
-                        <input type="submit" name="submit_image" value="Upload"  class="btn btn-primary">
-                     </form>
-                     </div>
+    
 
             <div id="id02" class="modal" >
                      <span onclick="document.getElementById('id02').style.display='none'" >&times;</span>
@@ -147,7 +103,7 @@ else{
                   </form>
                      </div>
 
-
+<div class="container">
 <div class="row">
   <div class="col-10">
   <table class="table table-striped">
@@ -182,7 +138,7 @@ else{
   </div>
 
 </div>
-
+</div>
 
     
 </body>

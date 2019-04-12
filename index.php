@@ -304,6 +304,7 @@
 
 </div>
 </div>
+<br>
 <!-- Card -->
 
 	<!-- Product filter section -->
@@ -333,7 +334,7 @@
                         <div class="pi-pic">
                            <img style="border-radius:15px 15px 0 0;" <?php echo 'src="data:image/jpeg;base64,'.base64_encode($row['image']).'"' ?>alt="">
                            <div class="pi-links">
-                              <a href="#" class="add-card add-to-cart" data-name="<?php  echo $row['nom_produit']; ?>" data-price="<?php  echo $row['prix']; ?>" ><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                              <a href="#" class="add-card add-to-cart"  data-name="<?php  echo $row['nom_produit']; ?>" data-price="<?php  echo $row['prix']; ?>" ><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
                               <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
                            </div>
                         </div>
@@ -354,7 +355,7 @@
 		</div>
 	</section>
 	<!-- Product filter section end -->
-<div class="container">
+<div class="container" id="cntr">
 	<div class="row" id="result_para">
 	<?php
                         $bdd = dbConnect();
@@ -364,8 +365,8 @@
                          while($row=$req->fetch())
                         {
                         ?>
-						<div class="col-3">
-                     <div class="product-item" style="border:1px solid rgba(0,0,0,.1);border-radius:15px">
+						<div class="col-12 col-md-3">
+						<div class="product-item" style="border:1px solid rgba(0,0,0,.1);border-radius:15px">
                         <div class="pi-pic">
                            <img style="border-radius:15px 15px 0 0;width:100%" <?php echo 'src="data:image/jpeg;base64,'.base64_encode($row['image']).'"' ?>alt="">
                            <div class="pi-links">
@@ -386,8 +387,8 @@
                         ?>
 
 	</div>
-	<input type="hidden" id="result_no" value="2">
-  
+	<input type="hidden" id="result_no" value="2" />
+	
 	<div class="text-center pt-5">
 				<button class="site-btn sb-line sb-dark" id="load">LOAD MORE</button>
 			</div>
@@ -456,9 +457,9 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
- $("#load").click(function(){
-  loadmore();
- });
+	$('#cntr').on('click', '#load', function () {
+    loadmore();
+});
 });
 
 function loadmore()
@@ -472,7 +473,14 @@ function loadmore()
  },
  success: function (response) {
   var content = document.getElementById("result_para");
-  content.innerHTML = content.innerHTML+response;
+  
+  $('#result_para').append(response);
+  
+
+var head= document.getElementsByTagName('head')[0];
+      var script= document.createElement('script');
+      script.src= 'js/cart.js';
+      head.appendChild(script);
 
   // We increase the value by 2 because we limit the results by 2
   document.getElementById("result_no").value = Number(val)+2;
